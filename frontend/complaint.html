@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Complaint</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Submit Complaint</h2>
+
+<input 
+  type="text" 
+  id="title" 
+  name="title"
+  placeholder="Complaint Title"
+>
+
+<textarea 
+  id="description" 
+  name="description"
+  placeholder="Description"
+></textarea>
+
+<select id="urgency" name="urgency">
+  <option value="Low">Low</option>
+  <option value="Medium">Medium</option>
+  <option value="High">High</option>
+</select>
+
+<button onclick="submitComplaint()">Submit</button>
+
+<script src="app.js"></script>
+</body>
+</html>

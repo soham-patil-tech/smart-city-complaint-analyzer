@@ -1,0 +1,29 @@
+body {
+  font-family: Arial;
+  background: #f4f6f8;
+  padding: 20px;
+}
+
+input, textarea, select, button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 300px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
