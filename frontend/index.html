@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Smart City Login</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<h2>Citizen Login</h2>
-<input id="email" placeholder="Email">
-<input id="password" type="password" placeholder="Password">
-<button onclick="login()">Login</button>
+  <meta charset="UTF-8" />
+  <title>Login | Smart City</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<script src="app.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="login-page">
+
+  <div class="login-card">
+    <h1>🏙️ Smart City</h1>
+    <p class="tagline">Citizen Complaint Portal</p>
+
+    <div class="input-group">
+      <label>Email</label>
+      <input id="email" type="email" placeholder="you@example.com" />
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <input id="password" type="password" placeholder="••••••••" />
+    </div>
+
+    <button class="login-btn" onclick="login()">Login</button>
+
+    <p class="hint">
+      Demo Login → <b>test@gmail.com / 1234</b>
+    </p>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
