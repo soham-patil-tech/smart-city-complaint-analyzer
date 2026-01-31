@@ -1,33 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Register Complaint</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Submit Complaint | Smart City</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-<h2>Submit Complaint</h2>
 
-<input 
-  type="text" 
-  id="title" 
-  name="title"
-  placeholder="Complaint Title"
->
+<body class="complaint-page">
 
-<textarea 
-  id="description" 
-  name="description"
-  placeholder="Description"
-></textarea>
+  <!-- Header -->
+  <header class="topbar">
+    <h1>📝 Register Complaint</h1>
+    <p class="subtitle">Help us improve your city</p>
+  </header>
 
-<select id="urgency" name="urgency">
-  <option value="Low">Low</option>
-  <option value="Medium">Medium</option>
-  <option value="High">High</option>
-</select>
+  <!-- Form Card -->
+  <section class="form-wrapper">
+    <div class="form-card">
 
-<button onclick="submitComplaint()">Submit</button>
+      <div class="input-group">
+        <label>Complaint Title</label>
+        <input 
+          type="text"
+          id="title"
+          name="title"
+          placeholder="e.g. Water leakage near main road"
+        />
+      </div>
 
-<script src="app.js"></script>
+      <div class="input-group">
+        <label>Description</label>
+        <textarea
+          id="description"
+          name="description"
+          placeholder="Describe the issue in detail..."
+        ></textarea>
+      </div>
+
+      <div class="input-group">
+        <label>Urgency Level</label>
+        <select id="urgency" name="urgency">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+
+      <button class="submit-btn" onclick="submitComplaint()">
+        🚀 Submit Complaint
+      </button>
+
+    </div>
+  </section>
+
+  <script src="app.js"></script>
 </body>
 </html>
