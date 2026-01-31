@@ -1,29 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
 body {
-  font-family: Arial;
-  background: #f4f6f8;
+  background: #f4f7fb;
   padding: 20px;
 }
 
-input, textarea, select, button {
-  display: block;
-  margin: 10px 0;
-  padding: 8px;
-  width: 300px;
+/* Header */
+.topbar {
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
 }
 
-button {
-  background: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
+.topbar h1 {
+  font-size: 24px;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  font-size: 15px;
+  color: #64748b;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.card.pending p { color: #f97316; }
+.card.resolved p { color: #22c55e; }
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.controls input,
+.controls select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  width: 220px;
+}
+
+/* Table */
+.table-container {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 table {
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse;
 }
 
-td, th {
-  border: 1px solid #ccc;
-  padding: 10px;
+th {
+  background: #e2e8f0;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.Pending { background: #ffedd5; color: #9a3412; }
+.status.Resolved { background: #dcfce7; color: #166534; }
+.status.InProgress { background: #dbeafe; color: #1e40af; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+  }
 }
